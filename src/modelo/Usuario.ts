@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 import { ApiProperty } from '@nestjs/swagger';
+import { IsNotEmpty } from 'class-validator';
 
 @Entity({name: 'tb_usuario'})
 export class Usuario {
@@ -10,7 +11,7 @@ export class Usuario {
 
   @ApiProperty()
   @Column({name: 'no_autor'})
-  // @IsNotEmpty({message: 'Nome do autor obrigatório'})
+  @IsNotEmpty({message: 'Nome do autor obrigatório'})
   noAutor: string;
 
   @ApiProperty()
