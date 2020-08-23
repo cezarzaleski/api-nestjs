@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  db:
+    image: mysql
+    container_name: mysql
+    restart: always
+    tty: true
+    ports:
+      - "33006:3306"
+    volumes:
+      - ./.docker/dbdata:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=nestjs
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=123456
