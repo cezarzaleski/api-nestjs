@@ -64,4 +64,10 @@ $ npm run test:cov
 
 ```bash
 $ npm run typeorm migration:create -- --name NomeTabela
+
+Executar migration
+$npm run typeorm migration:run
+
+Executar migration
+$npm run typeorm migration:run
 ```
